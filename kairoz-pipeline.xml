@@ -1,11 +1,27 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <flow-definition plugin="workflow-job">
-  <description>Kairoz pipeline using custom-named Jenkinsfile</description>
+  <description>Kairoz DevOps Pipeline</description>
   <keepDependencies>false</keepDependencies>
   <properties/>
   <definition class="org.jenkinsci.plugins.workflow.cps.CpsScmFlowDefinition" plugin="workflow-cps">
-    <scm class="hudson.scm.NullSCM"/>
+    <scm class="hudson.plugins.git.GitSCM" plugin="git">
+      <configVersion>2</configVersion>
+      <userRemoteConfigs>
+        <hudson.plugins.git.UserRemoteConfig>
+          <url>https://github.com/Vedalau99/kairoz.git</url>
+        </hudson.plugins.git.UserRemoteConfig>
+      </userRemoteConfigs>
+      <branches>
+        <hudson.plugins.git.BranchSpec>
+          <name>*/main</name>
+        </hudson.plugins.git.BranchSpec>
+      </branches>
+      <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+      <submoduleCfg class="list"/>
+      <extensions/>
+    </scm>
     <scriptPath>kairoz-pipeline.groovy</scriptPath>
+    <lightweight>true</lightweight>
   </definition>
   <triggers/>
   <disabled>false</disabled>
