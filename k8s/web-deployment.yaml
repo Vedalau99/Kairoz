@@ -14,8 +14,8 @@ spec:
     spec:
       containers:
         - name: web
-          image: kairoz-web:latest    # This must match your docker build tag
-          imagePullPolicy: Never      # Use this if not pushing to DockerHub
+          image: kairoz-web:latest    
+          imagePullPolicy: Never      
           ports:
             - containerPort: 5000
 ---
