@@ -1,4 +1,6 @@
-Kairoz: Jenkins for end-to-end CI/CD on GKE
+**Kairoz**: Jenkins for end-to-end CI/CD on GKE
+
+
   **Overview of the Project**
  Built with an emphasis on clean CI/CD pipelines using Jenkins, GKE Autopilot, and Artifact Registry, Kairoz is a cloud-native, multi-pod Kubernetes application.  The package consists of:
 
@@ -37,12 +39,12 @@ Kairoz: Jenkins for end-to-end CI/CD on GKE
  Docker, Google Cloud CLI, and Git
 
  Generated a GCP service account with the required IAM roles:
-
-    roles/container.admin
-
-    roles/storage.admin
-
-    roles/storage.objectViewer
+ 
+   roles/container.admin
+   
+   roles/storage.admin
+   
+   roles/storage.objectViewer
 
  2. Configuring the GKE Cluster:
  established a GKE Autopilot cluster in us-central1 with the name autopilot-cluster-1.
